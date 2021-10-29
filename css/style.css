@@ -61,7 +61,7 @@ height: 100%;
 filter: brightness(60%);
 }
 
-.image-list-container > img.active {
+.image-list-container.active  > img{
 filter: brightness(100%);
 border: 2px solid white;
 }
