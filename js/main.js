@@ -1,29 +1,42 @@
-//ARRAY CON ELEMENTI DA USARE
-const items = [
-    'img/01.jpg',
-    'img/02.jpg',
-    'img/03.jpg',
-    'img/04.jpg',
-    'img/05.jpg'
-];
 
-const title = [
-    'Svezia',
-    'Svizzera',
-    'Gran Bretagna',
-    'Germania',
-    'Paradise'
-];
+Vue.config.devtools = true;
 
-const text = [
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-    'Lorem ipsum',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-];
+const carosello = new Vue({
 
-//SELEZIONO LA COLONNA CON IMG GRANDE
+    el: "#root",
+    data: {
+        imgList: [
+            {
+                url: 'img/01.jpg',
+                titolo: 'Svezia',
+                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+            },
+            {
+                url: 'img/02.jpg',
+                titolo: 'Svizzera',
+                descrizione: 'Lorem ipsum'
+            },
+            {
+                url: 'img/03.jpg',
+                titolo: 'Gran Bretagna',
+                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+            },
+            {
+                url: 'img/04.jpg',
+                titolo: 'Germania',
+                descrizione: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
+            },
+            {
+                url: 'img/05.jpg',
+                titolo: 'Paradise',
+                descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
+            }
+        ]
+    }
+
+});
+
+/* //SELEZIONO LA COLONNA CON IMG GRANDE
 const imageBig = document.querySelector(".image-big");
 imageBig.classList.add("image-big-container");
 
@@ -32,13 +45,13 @@ imageList.classList.add("image-list-container", "d-flex", "flex-column");
 
 const titleList = document.querySelector(".my-titolo");
 
-const textList = document.querySelector(".my-testo");
+const textList = document.querySelector(".my-testo"); */
 
 //INIZIALIZZO INDICE
-let currentIndex = 0;
-
+/* let currentIndex = 0;
+ */
 //INSERISCO IMG NEL CONTENITORE E METTO CLASSE ACTIVE
-for (let i = 0; i < items.length; i++) {
+/* for (let i = 0; i < items.length; i++) {
     const currentImg = items[i];
     const currentTitle = title[i];
     const currentText = text[i];
@@ -60,11 +73,12 @@ for (let i = 0; i < items.length; i++) {
 
     console.log(currentTitle);
     console.log(currentText);
-}
+} */
+
 
 
 //FRECCE 
-const arrowTop = document.querySelector(".arrow-top");
+/* const arrowTop = document.querySelector(".arrow-top");
 const arrowBottom = document.querySelector(".arrow-bottom");
 
 arrowBottom.addEventListener("click", function () {
@@ -133,4 +147,4 @@ arrowTop.addEventListener("click", function () {
     newActiveImageBig.classList.add("active");
     newActiveTitle.classList.add("active");
     newActiveText.classList.add("active");
-});
+}); */
