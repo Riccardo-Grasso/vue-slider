@@ -56,7 +56,7 @@ max-width: 100%;
 width: 100%;
 object-fit: cover;
 object-position: center;
-height: calc(100% / 5);
+max-height: calc(100% / 5);
 filter: brightness(60%);
 }
 
@@ -68,6 +68,8 @@ border: 2px solid white;
 .arrows {
 width: 100%;
 height: 100%;
+position: absolute;
+top: 0;
 }
 
 .arrow {
@@ -101,29 +103,3 @@ box-shadow: 0px 3px 5px black;
 .arrow-circle:hover {
     opacity: 1;
 }
-
-.title {
-    position: absolute;
-    bottom: 0;
-    right: 5%;
-    color: white;
-    max-width: 50%;
-    text-align: end;
-
-}
-
-.my-titolo > h2 {
-    display: none;
-}
-
-.my-titolo > h2.active {
-    display: block;
-}  
-
-.my-testo > p {
-    display: none;
-}
-
-.my-testo > p.active {
-    display: block;
-}  

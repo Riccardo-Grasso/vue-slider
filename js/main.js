@@ -33,6 +33,15 @@ const carosello = new Vue({
             }
         ],
         currentImage: 0
+    },
+    methods: {
+        imgPrecedente() {
+            this.currentImage--;
+        },
+
+        imgSuccessiva() {
+            this.currentImage++;
+        }
     }
 
 });

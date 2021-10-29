@@ -34,27 +34,29 @@
 
                     </div>
 
-                    <!-- <div class="col-2 image-list my-height position-relative">
-                        <div
-                            class="arrows d-flex flex-column position-absolute justify-content-between align-items-center">
-                            <div class="arrow arrow-circle arrow-top my-z-index">
+                    <div class="col-2 image-list my-height position-relative">
+                        <div class="image-list-container" :class="i  === currentImage ?  'active' : ''"
+                            v-for="image, i in imgList">
+                            <img :src="image.url" alt="'img ' + i">
+                        </div>
+                        <div class="arrows d-flex flex-column justify-content-between align-items-center">
+                            <div class="arrow arrow-circle arrow-top my-z-index" @click="imgPrecedente">
                                 <i class="fas fa-chevron-up"></i>
                             </div>
 
-                            <div class="arrow arrow-circle arrow-bottom my-z-index">
+                            <div class="arrow arrow-circle arrow-bottom my-z-index" @click="imgSuccessiva">
                                 <i class="fas fa-chevron-down"></i>
                             </div>
-
                         </div>
-
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <script src="js/main.js"></script>
+
 </body>
+<script src="js/main.js"></script>
 
 </html>
