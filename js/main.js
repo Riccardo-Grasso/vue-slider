@@ -1,4 +1,3 @@
-
 Vue.config.devtools = true;
 
 const carosello = new Vue({
@@ -32,18 +31,26 @@ const carosello = new Vue({
                 descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
             }
         ],
-        currentImage: 0
+        currentImage: 0,
     },
     methods: {
         imgPrecedente() {
-            this.currentImage--;
+            let indice = this.currentImage - 1;
+            if (indice < 0) {
+                indice = this.imgList.length - 1;
+            }
+            this.currentImage = indice;
         },
 
         imgSuccessiva() {
-            this.currentImage++;
+            let indice = this.currentImage + 1;
+            if (indice > this.imgList.length - 1) {
+                indice = 0;
+            }
+            this.currentImage = indice;
+
         }
     }
-
 });
 
 /* //SELEZIONO LA COLONNA CON IMG GRANDE
