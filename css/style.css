@@ -50,13 +50,14 @@ display: block;
 
 .image-list-container {
 max-width: 100%;
+height: calc(100% / 5);
 }
 
 .image-list-container > img {
 width: 100%;
 object-fit: cover;
 object-position: center;
-max-height: calc(100% / 5);
+height: 100%;
 filter: brightness(60%);
 }
 
