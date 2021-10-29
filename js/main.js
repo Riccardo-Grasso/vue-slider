@@ -31,7 +31,8 @@ const carosello = new Vue({
                 titolo: 'Paradise',
                 descrizione: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
             }
-        ]
+        ],
+        currentImage: 0
     }
 
 });

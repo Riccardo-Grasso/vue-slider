@@ -22,8 +22,9 @@
                 <div class="row d-flex g-0 main-image">
 
                     <div class="col-10 my-height">
-                        <div class="image-big image-big-container" v-for="image in imgList">
-                            <img v-bind:src="image.url" alt="img">
+                        <div class="image-big image-big-container" :class="i  === currentImage ?  'active' : ''"
+                            v-for="image, i in imgList">
+                            <img :src="image.url" :alt="'img ' + i">
                             <div class=" texts-container">
                                 <h2>{{image.titolo}}</h2>
                                 <p>{{image.descrizione}}</p>
