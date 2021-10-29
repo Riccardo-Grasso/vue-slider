@@ -50,6 +50,11 @@ const carosello = new Vue({
             this.currentImage = indice;
 
         }
+    },
+    mounted() {
+        setInterval(() => {
+            this.imgSuccessiva();
+        }, 3000);
     }
 });
 
